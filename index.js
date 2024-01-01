@@ -9,8 +9,13 @@ const app = express();
 // Base de datos
 dbConnection();
 
+var corsOptions = {
+    origin: 'https://superlative-wisp-11977e.netlify.app/',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
 // CORS
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Directorio Público
 app.use(express.static('public'));
