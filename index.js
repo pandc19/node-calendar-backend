@@ -10,7 +10,10 @@ const app = express();
 dbConnection();
 
 var corsOptions = {
-    origin: 'https://superlative-wisp-11977e.netlify.app',
+    origin: [
+        'http://localhost:5173',
+        'http://localhost',
+        'https://superlative-wisp-11977e.netlify.app'],
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
